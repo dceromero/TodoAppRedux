@@ -1,0 +1,9 @@
+<footer class="footer">
+    <span class="todo-count"><strong>{{count}}</strong> Tareas pendientes</span>
+    <ul class="filters" >
+        <li *ngFor="let item of arrayFilter" (click)="changeState(item)" >
+            <a >{{item | titlecase}}</a>
+        </li>
+    </ul>
+    <button class="clear-completed" (click)="clearAll()">Limpiar completados</button>
+</footer>
